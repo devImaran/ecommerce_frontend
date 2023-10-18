@@ -1,0 +1,65 @@
+.sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .logo {
+        color: #000;
+        font-family: Integral CF;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        // border: 1px solid red;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px 0;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            width: 90%;
+            padding: 0;
+
+
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;;
+                color: rgba(0, 0, 0, 0.60);
+                padding: 20px 0;
+                width: 100%;
+                gap: 10px;
+                border-radius: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.10);
+                cursor: pointer;
+
+
+                span {
+                    text-transform: capitalize;
+                    font-weight: 900;
+
+                }
+
+                &.active{
+                    background-color: #000;
+                    color: white;
+                }
+            }
+        }
+    }
+}
