@@ -2,7 +2,7 @@ import { Navigate, Outlet } from "react-router-dom";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import Home from "../pages/home/Home";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import Shop from "../pages/shop/Shop";
 import ProductDetails from "../pages/productDetails/ProductDetails";

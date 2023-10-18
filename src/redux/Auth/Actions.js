@@ -6,7 +6,7 @@ export const login = (userData) =>{
     return async (dispatch)=>{
         dispatch({type: LOGIN_REQUEST})
         try{
-            const res = await axios.post('http://localhost:8080/api/auth/login', userData)
+            const res = await api.post('/auth/login', userData)
              if (res && res.data.success){
                 localStorage.setItem("authToken", res.data.data.token)
                 dispatch({type: LOGIN_SUCCESS, payload: { token :res.data.data.token }})
