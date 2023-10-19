@@ -30,20 +30,15 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
   const auth = useSelector(state => state.auth)
   const { isNewItemAdded, cartItems } = useSelector(state => state.cart)
   const { categoriesList, loading } = useSelector(state => state.category);
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
   const [open, setOpen] = useState(false)
-  // const [authModalOpen, setAuthModalOpen] = useState(false);
   const [openCartModal, setOpenCartModal] = useState(false);
-  const [user, setUser] = useState(null)
-
-  // const handleAuthModalOpen = () => setAuthModalOpen(true);
-  // const handleAuthModalClose = () => setAuthModalOpen(false);
-
   const [anchorEl, setAnchorEl] = React.useState(null);
   const openProfile = Boolean(anchorEl);
 
@@ -64,6 +59,10 @@ export default function Navbar() {
     setOpen(false)
     navigate(`/shop/list?category=${categoryId},${sectionId},${itemId}`)
   }
+
+  useEffect(()=>{
+    console.log("navbar called again")
+  },[])
 
   useEffect(() => {
     dispatch(categoriesWiseProducts())
